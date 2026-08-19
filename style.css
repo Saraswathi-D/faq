@@ -272,32 +272,28 @@ h2 {
         font-size: 14px;
         text-align: left;
     }
-}@media (max-width: 600px) {
+}
+@media screen and (max-width: 600px) {
 
     body {
-        padding: 110px 15px 25px;
+        padding: 0 15px;
     }
 
     h1 {
+        position: relative;
+        top: 70px;
+        margin-bottom: 135px;
         text-align: center;
         font-size: 26px;
-        margin-bottom: 35px;
     }
 
     .faq-item {
+        position: relative;
+        top: 40px;
         width: 100%;
         max-width: 500px;
-        margin: 0 auto 15px;
-    }
-
-    .question {
-        width: 100%;
-        font-size: 15px;
-        padding: 14px;
-    }
-
-    .answer {
-        font-size: 14px;
-        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
     }
 }
