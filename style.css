@@ -286,20 +286,22 @@ h2 {
     }
 
     h1 {
-        position: relative;
-        top: 70px;
-        margin-bottom: 135px;
-        text-align: center;
-        font-size: 26px;
-    }
+    position: relative;
+    top: 70px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 26px;
+}
 
-    .subtitle {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 0;
-        margin-bottom: 30px;
-        line-height: 1.4;
-    }
+.subtitle {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 100px;
+    line-height: 1.4;
+}
 
     .faq-item {
         position: relative;
