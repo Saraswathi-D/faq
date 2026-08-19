@@ -21,27 +21,23 @@ body {
 
     animation: pageFade 0.8s ease-in;
 }
-
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     color: #fdfcfc;
-
-    animation: slideDown 0.8s ease;
-
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-p{
-    font-size: 15px;
+
+.subtitle {
     text-align: center;
-    margin-bottom: 30px;
-    color: #fdfcfc;
-
+    margin-top: 20px;
+    margin-bottom: 35px;
+    color: #ffffff;
+    font-size: 15px;
     animation: slideDown 0.8s ease;
 
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-
 }
+
 h2 {
     text-align: left;
     margin-bottom: 30px;
@@ -295,6 +291,14 @@ h2 {
         margin-bottom: 135px;
         text-align: center;
         font-size: 26px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        line-height: 1.4;
     }
 
     .faq-item {
