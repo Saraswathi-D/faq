@@ -31,7 +31,17 @@ h1 {
 
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+p{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fdfcfc;
 
+    animation: slideDown 0.8s ease;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+}
 h2 {
     text-align: left;
     margin-bottom: 30px;
