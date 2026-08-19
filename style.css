@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,37 +11,35 @@ body {
     color: #333;
 
     background-image: url("https://media.istockphoto.com/id/1408364942/photo/white-question-mark-sign-on-punctuation-blue-background-with-abstract-symbol-concept-or-faq.jpg?s=612x612&w=0&k=20&c=6Eu1-avucGrS9pGjFnbKzyQ2lpoEJcsSpGHEraaC8HA=");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh
-    animation : pageFade 0.8s ease-in;
+
+    min-height: 100vh;
+
+    animation: pageFade 0.8s ease-in;
 }
 
-.faq-image {
-    display: block;
-    width: 600px;
-    height: 250px;
-
-    object-fit: cover;
-
-    margin: 0 auto 30px;
-
-    border-radius: 12px;
-}
 h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #fdfcfc;
+
     animation: slideDown 0.8s ease;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-h2{
-    text-align: center;
+
+h2 {
+    text-align: left;
     margin-bottom: 30px;
     color: #fdfcfc;
-    text-align:left;
+
+    animation: fadeIn 1s ease;
 }
+
 .faq-item {
     max-width: 600px;
     margin: 0 auto 15px;
@@ -51,71 +50,108 @@ h2{
     overflow: hidden;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    animation: slideUp 0.7s ease both;
+
     transition:
         box-shadow 0.3s ease,
         transform 0.3s ease;
 }
-
 
 .faq-item:nth-of-type(1) {
     animation-delay: 0.1s;
 }
 
 .faq-item:nth-of-type(2) {
-    animation-delay: 0.2s;
-}
-
-.faq-item:nth-of-type(3) {
     animation-delay: 0.3s;
 }
 
-.faq-item:nth-of-type(4) {
+.faq-item:nth-of-type(3) {
     animation-delay: 0.4s;
 }
 
-.faq-item:nth-of-type(5) {
+.faq-item:nth-of-type(4) {
     animation-delay: 0.5s;
 }
+
+.faq-item:nth-of-type(5) {
+    animation-delay: 0.6s;
+}
+
+.faq-item:nth-of-type(6) {
+    animation-delay: 0.6s;
+}
+
+
+.faq-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
 .question {
     padding: 15px 18px;
+
     font-size: 17px;
-    font-weight: none;
+    font-weight: normal;
+
     cursor: pointer;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:#000000;
+
+    color: #000000;
+
     background-color: rgb(124, 154, 203);
 
     transition:
         background-color 0.3s ease,
-        padding-left 0.3s ease;
+        padding-left 0.3s ease,
+        letter-spacing 0.3s ease;
 }
 
 .question:hover {
-
     padding-left: 25px;
+
+    background-color: rgb(105, 140, 195);
+
+    letter-spacing: 0.3px;
 }
 
 .question span {
-    font-size: 10px;
+    font-size: 12px;
+
     font-weight: normal;
-    color:rgb(0, 0, 0);
+
+    color: rgb(0, 0, 0);
 
     transition:
         transform 0.4s ease,
         color 0.3s ease;
 }
 
+.faq-item.active .question span {
+
+    color: #010501;
+}
 
 .answer {
     max-height: 0;
+
     overflow: hidden;
+
     padding: 0 18px;
+
     line-height: 1.6;
+
     color: #000000;
+
     background-color: rgb(202, 223, 223);
+
     opacity: 0;
+
     transition:
         max-height 0.5s ease,
         opacity 0.4s ease,
@@ -124,18 +160,22 @@ h2{
 
 .faq-item.active .answer {
     max-height: 200px;
+
     padding: 12px 18px 18px;
+
     opacity: 1;
 
+    animation: answerFade 0.4s ease;
 }
 
 .faq-item.active {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(-3px);
 }
 
 @keyframes pageFade {
-
     from {
         opacity: 0;
     }
@@ -146,7 +186,6 @@ h2{
 }
 
 @keyframes slideDown {
-
     from {
         opacity: 0;
         transform: translateY(-25px);
@@ -159,10 +198,31 @@ h2{
 }
 
 @keyframes slideUp {
-
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes answerFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
     }
 
     to {
@@ -172,8 +232,19 @@ h2{
 }
 
 
-@media (max-width: 600px) {
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
     body {
         padding: 25px 15px;
     }
@@ -194,5 +265,10 @@ h2{
 
     .answer {
         font-size: 14px;
+    }
+
+    #searchInput {
+        font-size: 14px;
+        padding: 12px 16px;
     }
 }
