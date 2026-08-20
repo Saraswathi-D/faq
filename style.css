@@ -26,7 +26,32 @@ h1 {
     margin-bottom: 0;
     color: #fdfcfc;
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto 30px;
+}
 
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(7, 125, 198);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.active {
+    background-color: rgb(7, 125, 198);
+    color: rgb(0, 0, 0);
+}
 .subtitle {
     text-align: center;
     margin-top: 20px;
